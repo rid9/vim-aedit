@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Advanced Edit</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p><em>Advanced Edit</em> provides convenience commands, shortcuts and completion for programming.</p>
+    <p>If you get more productive and you enjoy editing source code more that you did before, all of this without even remembering that you're using <em>Advanced Edit</em>, then the script has fullfilled its purpose.</p>
+    <h1>Features</h1>
+    <h2>Generic</h2>
+    <dl>
+      <dt>Brace completion</dt>
+      <dd>Typing an opening brace will automatically append a closing brace. If you typed the opening brace by mistake, use <em class="keystroke">Backspace</em> to delete it and the closing brace will be deleted automatically.</dd>
+
+      <dt>Punctuation completion</dt>
+      <dd>In languages that use <code>;</code> as the ending of a statement, the <code>;</code> will be automatically appended where appropiate.</dd>
+      <dd>Use <em class="keystroke">Alt-)</em>, <em class="keystroke">Alt-]</em>, <em class="keystroke">Alt-}</em>, <em class="keystroke">Alt-;</em> or <em class="keystroke">Alt-,</em> to append <code>)</code>, <code>]</code>, <code>}</code>, <code>;</code> or <code>,</code> respectively at the end of the line.</dd>
+
+      <dt>Word completion</dt>
+      <dd>The <em class="keystroke">Tab</em> key will present you with a completion menu formed by the words in the currently opened buffers.</dd>
+
+      <dt>Block completion</dt>
+      <dd>Use <em class="keystroke">Alt-/</em> to complete a block. For example, if you're in a language in which blocks are formed by a { ... } construct (such as PHP or C), this command will automatically append both braces and put the cursor between them, with an increased indent. The same applies for other supported languages and markup, such as XML, where a block can be formed by an opening and a closing tag; just write the opening <code>&lt;tag&gt;</code> and the closing <code>&lt;/tag&gt;</code> will automatically be appended by this command. It can also be used with "case" constructs.</dd>
+      <dd>Use <em class="keystroke">Alt-Shift-/</em> to do the same as with <em class="keystroke">Alt-/</em>, but with opening braces appearing on the same line.</dd>
+      <dd>Use <em class="keystroke">Alt-{</em> in visual mode to enclose the selection in a { ... } block.</dd>
+      <dd>Use <em class="keystroke">Alt-/</em> in visual mode to comment the selection.</dd>
+      <dd>Use <em class="keystroke">Alt-'</em> in visual mode to cut the contents of the selection and automatically use it as a body for the next <code>&lt;tag&gt;</code> that you write.</dd>
+
+      <dt>Template expansion</dt>
+      <dd>Use the <em class="keystroke">Spacebar</em> key to expand a template. Templates are small snippets of text that, when expanded, are replaced by longer constructs.</dd>
+
+      <dt>Line movement</dt>
+      <dd><em class="keystroke">Alt-Up</em> and <em class="keystroke">Alt-Down</em> will move the current line up or down, from insert and normal mode.</dd>
+
+      <dt>Jumps</dt>
+      <dd>Use <em class="keystroke">Ctrl-CR</em> to jump to the next line, from wherever you are in the current line.</dd>
+      <dd>Use <em class="keystroke">Ctrl-Shift-CR</em> to jump to the next line and raise the indent by one level.</dd>
+      <dd>Use <em class="keystroke">Shift-CR</em> to jump to the previous line.</dd>
+      <dd>Use <em class="keystroke">Ctrl-A</em> or <em class="keystroke">Ctrl-E</em> to move the cursor to the first non-space character or the last character in the line, respectively.</dd>
+
+      <dt>Smart Home key</dt>
+      <dd>The <em class="keystroke">Home</em> key will move the cursor to the first non-space character in the line. If you wish to move to the first character, whatever the character is, use <em class="keystroke">Shift-Home</em> instead.</dd>
+
+      <dt>Indenting</dt>
+      <dd>Use <em class="keystroke">Tab</em> or <em class="keystroke">Shift-Tab</em> in visual mode to indent or dedent the selected lines, respectively.</dd>
+
+      <dt>Shortcuts</dt>
+      <dd>Use <em class="keystroke">F2</em> to toggle search highlighting.</dd>
+      <dd>Use <em class="keystroke">Alt-N</em> to toggle line numbering.</dd>
+      <dd>Use <em class="keystroke">Alt-A</em> to toggle word wrapping.</dd>
+      <dd>Use <em class="keystroke">Ctrl-Q</em> to toggle <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERD tree</a>.</dd>
+      <dd>Use <em class="keystroke">Tab</em> in normal mode to switch between windows.</dd>
+      <dd>Use <em class="keystroke">Alt-D</em> to delete the rest of the word under the cursor.</dd>
+      <dd>Use <em class="keystroke">Alt-!</em> to execute the last ! command.</dd>
+      <dd>Use <em class="keystroke">Alt-:</em> to execute the last : command.</dd>
+      <dd>Use <em class="keystroke">Alt-W</em> to write the file if it was changed, or <em class="keystroke">Alt-Shift-W</em> to write the file regardless of its state.</dd>
+      <dd>Use <em class="keystroke">Alt-Q</em> to quit, or <em class="keystroke">Alt-Shift-Q</em> to quit without any prompts.</dd>
+    </dl>
+    <h2>PHP</h2>
+    <dl>
+      <dt>PHP tag</dt>
+      <dd>Use <em class="keystroke">Alt-.</em> to insert a <code>&lt;?php ... ?&gt;</code> construct.</dd>
+    </dl>
+    <h2>HTML</h2>
+    <dl>
+      <dt>Tag features</dt>
+      <dd>If you write an opening <code>&lt;tag&gt;</code>, it will automatically be closed.</dd>
+      <dd>After writing an opening <code>&lt;tag&gt;</code>, use <em class="keystroke">&gt;</em> to place the closing tag on the next line and position the cursor between the opening and closing tags.</dd>
+    </dl>
+    <h2>MXML</h2>
+    <dl>
+      <dt>Automatic capitalization</dt>
+      <dd>If you use the "mx" template, the first letter following the <code>:</code> sign will automatically be capitalized.</dd>
+    </dl>
+    <h1>Templates</h1>
+    <p>Following is a list of default templates. To define your own template, edit your .vimrc file and add <code>g:template</code> definitions in the form of <code>let&nbsp;g:template{'filetype'}{'name'}&nbsp;=&nbsp;"expansion"</code>. For examples on how to write templates, please refer to the source code.</p>
+    <h2>Generic</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>f</code></td>
+        <td><code>function</code> with the opening brace on the same line, where applicable.</td>
+      </tr>
+      <tr>
+        <td><code>ff</code></td>
+        <td><code>function</code> with the opening brace on the next line, where applicable.</td>
+      </tr>
+      <tr>
+        <td><code>r</code></td>
+        <td><code>return</code></td>
+      </tr>
+    </table>
+    <h2>Base</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>thtml</code>, <code>tht</code></td>
+        <td>HTML 4.01 template.</td>
+      </tr>
+      <tr>
+        <td><code>txhtml</code>, <code>thtt</code></td>
+        <td>XHTML 1.0 template.</td>
+      </tr>
+      <tr>
+        <td><code>txml</code>, <code>tx</code></td>
+        <td>XML template.</td>
+      </tr>
+      <tr>
+        <td><code>tmxml</code>, <code>tmx</code></td>
+        <td>MXML template.</td>
+      </tr>
+      <tr>
+        <td><code>css</code></td>
+        <td>CSS <code>&lt;link&gt;</code>.</td>
+      </tr>
+      <tr>
+        <td><code>js</code></td>
+        <td>JavaScript <code>&lt;script&gt;</code> tag with a <code>src</code> attribute.</td>
+      </tr>
+    </table>
+    <h2>PHP</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>cl</code></td>
+        <td><code>class</code></td>
+      </tr>
+      <tr>
+        <td><code>ex</code></td>
+        <td><code>extends</code></td>
+      </tr>
+      <tr>
+        <td><code>n</code></td>
+        <td><code>new</code></td>
+      </tr>
+      <tr>
+        <td><code>t</code></td>
+        <td><code>$this</code></td>
+      </tr>
+      <tr>
+        <td><code>n</code></td>
+        <td><code>new</code></td>
+      </tr>
+      <tr>
+        <td><code>st</code></td>
+        <td><code>static</code></td>
+      </tr>
+      <tr>
+        <td><code>pb</code></td>
+        <td><code>public</code></td>
+      </tr>
+      <tr>
+        <td><code>pv</code></td>
+        <td><code>private</code></td>
+      </tr>
+      <tr>
+        <td><code>pt</code></td>
+        <td><code>protected</code></td>
+      </tr>
+      <tr>
+        <td><code>e</code></td>
+        <td><code>echo</code></td>
+      </tr>
+      <tr>
+        <td><code>v</code></td>
+        <td><code>var</code></td>
+      </tr>
+      <tr>
+        <td><code>gl</code></td>
+        <td><code>global</code></td>
+      </tr>
+      <tr>
+        <td><code>fe</code></td>
+        <td><code>foreach</code></td>
+      </tr>
+      <tr>
+        <td><code>wh</code></td>
+        <td><code>while</code></td>
+      </tr>
+      <tr>
+        <td><code>sw</code></td>
+        <td><code>switch</code></td>
+      </tr>
+      <tr>
+        <td><code>cs</code></td>
+        <td><code>case</code></td>
+      </tr>
+      <tr>
+        <td><code>csd</code></td>
+        <td><code>default</code></td>
+      </tr>
+      <tr>
+        <td><code>ar</code></td>
+        <td><code>array</code></td>
+      </tr>
+      <tr>
+        <td><code>rq</code></td>
+        <td><code>require</code></td>
+      </tr>
+      <tr>
+        <td><code>rqo</code></td>
+        <td><code>require_once</code></td>
+      </tr>
+      <tr>
+        <td><code>dn</code></td>
+        <td><code>dirname(__FILE__)</code></td>
+      </tr>
+      <tr>
+        <td><code>p</code></td>
+        <td><code>&lt;? ... ?&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>pe</code></td>
+        <td><code>&lt;?= ... ?&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>srv</code></td>
+        <td><code>$_SERVER</code></td>
+      </tr>
+      <tr>
+        <td><code>def</code></td>
+        <td><code>define</code></td>
+      </tr>
+      <tr>
+        <td><code>lab</code></td>
+        <td><code>&lt;label&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>inp</code></td>
+        <td><code>&lt;input&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>sel</code></td>
+        <td><code>&lt;select&gt;</code></td>
+      </tr>
+    </table>
+    <h2>JavaScript</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>t</code></td>
+        <td><code>this</code></td>
+      </tr>
+      <tr>
+        <td><code>m</code></td>
+        <td>method with <code>{</code> on the next line.</td>
+      </tr>
+      <tr>
+        <td><code>mm</code></td>
+        <td>method with <code>{</code> on the same line.</td>
+      </tr>
+    </table>
+    <h2>MXML</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>mx</code></td>
+        <td><code>&lt;mx:... /&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>as</code></td>
+        <td><code>&lt;mx:Script source="..."&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>scr</code></td>
+        <td><code>&lt;mx:Script&gt;...&lt;/mx:Script&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>css</code></td>
+        <td><code>&lt;mx:Style source="..."&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>st</code></td>
+        <td><code>&lt;mx:Style&gt;...&lt;/mx:Style&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>mxp</code></td>
+        <td><code>&lt;mx:Panel&gt;...&lt;/mx:Panel&gt;</code></td>
+      </tr>
+    </table>
+    <h2>Python</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Expansion</th>
+      </tr>
+      <tr>
+        <td><code>cl</code></td>
+        <td><code>class</code></td>
+      </tr>
+      <tr>
+        <td><code>s</code>, <code>t</code></td>
+        <td><code>self</code></td>
+      </tr>
+      <tr>
+        <td><code>fi</code></td>
+        <td><code>def __init__(self)</code></td>
+      </tr>
+      <tr>
+        <td><code>p</code></td>
+        <td><code>pass</code></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
